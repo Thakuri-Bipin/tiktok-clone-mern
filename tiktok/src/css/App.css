@@ -1,0 +1,38 @@
+html {
+  scroll-snap-type: y mandatory;
+}
+
+.app {
+  height: 100vh;
+  background-color: black;
+  display: grid;
+  place-items: center;
+}
+
+.app__videos {
+  border-radius: 20px;
+  height: 100vh;
+  max-width: 500px;
+  position: relative;
+  overflow: scroll;
+  scroll-snap-type: y mandatory;
+  /* top: 50px; */
+  width: 80%;
+}
+
+/* hide scrollbar chrome */
+.app__videos::-webkit-scrollbar {
+  display: none;
+}
+
+/* hide scrollbar firefox, IE, Firefox */
+.app__videos {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@media screen and (max-width: 720px) {
+  .app__videos {
+    width: 100%;
+  }
+}
